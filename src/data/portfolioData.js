@@ -104,8 +104,8 @@ export const projectsData = [
       "Interactive user interface"
     ],
     technologies: ["React", "JavaScript", "CSS"],
-    githubUrl: "https://github.com/youssefzouiligue/animated-login-page",
-    liveUrl: "https://vercel.com/youssef-zouiligue-s-projects/animated-login-page"
+    githubUrl: "https://github.com/youssefzouiligue/To-Do-List",
+    liveUrl: "https://todo-list-app-ruby-mu.vercel.app/"
   }
 ];
 
