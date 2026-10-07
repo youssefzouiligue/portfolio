@@ -61,6 +61,20 @@ export const projectsData = [
     badge: "Featured / Main Project"
   },
   {
+    id: "storeexxx",
+    featured: false,
+    title: "Storeexxx",
+    description: "A full-stack e-commerce web application featuring product browsing, category filtering, cart management, and user authentication.",
+    features: [
+      "Product catalog with category filtering",
+      "Interactive shopping cart & checkout flow",
+      "User authentication & profile management"
+    ],
+    technologies: ["JavaScript", "Node.js", "Express", "MySQL", "REST APIs"],
+    githubUrl: "https://github.com/youssefzouiligue/storeexxx",
+    liveUrl: "https://storeexxx.vercel.app/"
+  },
+  {
     id: "ticket-manager",
     featured: false,
     title: "Ticket Management System",
@@ -125,6 +139,14 @@ export const experienceData = [
 ];
 
 export const educationData = [
+  {
+    id: "ensam-casablanca",
+    degree: "Professional Bachelor's Degree",
+    institution: "ENSAM Casablanca",
+    field: "Web Development & Artificial Intelligence",
+    period: "Currently studying",
+    status: "Currently studying"
+  },
   {
     id: "ts-di",
     degree: "Technicien Spécialisé — Développement Informatique",

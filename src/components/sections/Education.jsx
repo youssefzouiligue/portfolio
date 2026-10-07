@@ -20,20 +20,31 @@ const Education = () => {
         </div>
 
         {/* Education Grid */}
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-          {educationData.map((edu) => (
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {educationData.map((edu, idx) => (
             <div
               key={edu.id}
-              className="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-4 hover:border-blue-500/30 transition-colors"
+              className={`glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-4 hover:border-blue-500/30 transition-colors ${
+                idx === 0 ? 'md:col-span-2 lg:col-span-1' : ''
+              }`}
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="p-3 rounded-xl bg-blue-600/10 border border-blue-500/20 text-blue-400">
                     <Award className="w-6 h-6" />
                   </div>
-                  <span className="inline-flex items-center gap-1 text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
-                    <Calendar className="w-3.5 h-3.5 text-blue-400" />
-                    <span>{edu.period}</span>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                    {edu.status === 'Currently studying' ? (
+                      <>
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="text-emerald-400 font-medium">{edu.status}</span>
+                      </>
+                    ) : (
+                      <>
+                        <Calendar className="w-3.5 h-3.5 text-blue-400" />
+                        <span>{edu.period}</span>
+                      </>
+                    )}
                   </span>
                 </div>
 
@@ -44,6 +55,14 @@ const Education = () => {
                   <p className="text-sm font-medium text-blue-400 mt-1">
                     {edu.institution}
                   </p>
+                  {edu.field && (
+                    <div className="mt-3 pt-3 border-t border-slate-800/80">
+                      <p className="text-xs text-slate-300 flex items-center gap-1.5">
+                        <span className="text-slate-400 font-medium">Field:</span>
+                        <span className="text-slate-200">{edu.field}</span>
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
